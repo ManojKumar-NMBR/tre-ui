@@ -15,7 +15,6 @@ export class AppComponent {
   ];
 
   getCarouselClass(index: number) {
-    debugger
     return this.carouselSlideData[index].bgImgClass;
   }
 }
