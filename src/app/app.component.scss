@@ -1,0 +1,25 @@
+.slide {
+    display: block;
+}
+
+.carouselSlide {
+    width: 100%;
+    height: 80vmin;
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+
+.carouselSlide-0 {
+    background-image: url(../assets/images/dashboard/carousel-1.jpg);
+}
+.carouselSlide-1 {
+    background-image: url(../assets/images/dashboard/carousel-2.jpg);
+}
+.carouselSlide-2 {
+    background-image: url(../assets/images/dashboard/carousel-3.jpg);
+}
+.carouselSlide-3 {
+    background-image: url(../assets/images/dashboard/carousel-4.jpg);
+}

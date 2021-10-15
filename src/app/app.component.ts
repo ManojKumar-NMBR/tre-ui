@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'tre-ui';
+
+  carouselSlideData = [
+    { id: 0, bgImgClass: 'carouselSlide-0', firstText: '', secondText: '', thirdText: '' },
+    { id: 1, bgImgClass: 'carouselSlide-1', firstText: '', secondText: '', thirdText: '' },
+    { id: 1, bgImgClass: 'carouselSlide-2', firstText: '', secondText: '', thirdText: '' },
+    { id: 2, bgImgClass: 'carouselSlide-3', firstText: '', secondText: '', thirdText: '' }
+  ];
+
+  getCarouselClass(index: number) {
+    debugger
+    return this.carouselSlideData[index].bgImgClass;
+  }
 }
