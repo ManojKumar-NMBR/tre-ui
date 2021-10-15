@@ -15,6 +15,6 @@ export class AppComponent {
   ];
 
   getCarouselClass(index: number) {
-    return this.carouselSlideData[index].bgImgClass;
+    return this.carouselSlideData[index].bgImgClass; 
   }
 }
