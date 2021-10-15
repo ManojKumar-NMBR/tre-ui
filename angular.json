@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/styles/global-styles.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -127,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "tre-ui"
+  "defaultProject": "tre-ui",
+  "cli": {
+    "analytics": "fc524b6e-05d5-4462-91b0-53f10e93f07d"
+  }
 }
