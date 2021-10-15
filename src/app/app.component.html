@@ -7,30 +7,25 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <img class="logo" src="../assets/TRE-Trans-Logo.png">
       <span class="fw-500 fs-5">Tanvika Real Estate</span>
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 pe-5">
+        <li class="nav-item" *ngFor="let pageMenu of pageMenus">
+          <span class="nav-link active text-white pointerCursor px-3">{{ pageMenu.name }}</span>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
 <section class="">
   <div class="container-fluid">
     <div class="row">
-      <carousel [isAnimated]="true" [interval]="30000" [noPause]="false" [showIndicators]="true">
+      <carousel [isAnimated]="true" [interval]="3000" [noPause]="false" [showIndicators]="true">
         <slide *ngFor="let carouselSlide of carouselSlideData" class="d-block">
           <div class="d-flex align-items-center justify-content-center text-white carouselSlide"
             [ngClass]="getCarouselClass(carouselSlide.id)">
             <div class="lead text-center">
-              <h2>First custom content</h2>
-              <h3>First slide label</h3>
+              <h2>{{ carouselSlide.firstText }} custom content</h2>
+              <h3>{{ carouselSlide.firstText }} slide label</h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
             </div>
           </div>
