@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'tre-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
 
   carouselSlideData = [
     { id: 0, bgImgClass: 'carouselSlide-0', firstText: 'First', secondText: '', thirdText: '' },
@@ -22,9 +22,32 @@ export class AppComponent {
     { name: 'Friends', path: 'friends' },
     { name: 'Testimonial', path: 'testimonial' },
     { name: 'Contact', path: 'contact' }
-  ]
+  ];
+
+  constructor(private cdf: ChangeDetectorRef) { }
+
+  ngOnInit() { }
+
+  ngAfterViewInit() {
+    this.cdf.detectChanges();
+  }
+
+
+  @ViewChild('scrollMe') myScrollContainer!: ElementRef;
+  getNavBarClass() {
+    // console.log(this.myScrollContainer);
+    let pos = (document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.offsetHeight;
+    let max = document.documentElement.scrollHeight;
+
+
+    if (document.documentElement.scrollTop && document.documentElement.scrollTop > 5)
+      return 'navBarTransparent';
+    else
+      return '';
+  }
 
   getCarouselClass(index: number) {
     return this.carouselSlideData[index].bgImgClass;
   }
+
 }
