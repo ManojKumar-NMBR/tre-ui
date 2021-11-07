@@ -1,23 +1,38 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" [ngClass]="getNavBarClass()">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <img class="logo" src="../assets/TRE-Trans-Logo.png">
-      <span class="fw-500 fs-5">Tanvika Real Estate</span>
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 pe-5">
-        <li class="nav-item" *ngFor="let pageMenu of pageMenus">
-          <span class="nav-link active text-white pointerCursor px-3">{{ pageMenu.name }}</span>
-        </li>
-      </ul>
+<section id="homeBlock" role="banner">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" [ngClass]="getNavBarClass()">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <img class="logo" src="../assets/TRE-Trans-Logo.png">
+        <span class="fw-500 fs-5">Tanvika Real Estate</span>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 pe-5">
+          <li class="nav-item" *ngFor="let pageMenu of pageMenus" (click)="goToBlock(pageMenu.block)">
+            <a class="nav-link active text-white pointerCursor px-3" [href]="pageMenu.block">{{ pageMenu.name }}</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<div class="container-fluid px-0" *ngFor="let a of [1,2]">
-  <div class="row">
+  <carousel [isAnimated]="true" [interval]="3000" [noPause]="false" [showIndicators]="true">
+    <slide *ngFor="let carouselSlide of carouselSlideData" class="d-block">
+      <div class="d-flex align-items-center justify-content-center text-white carouselSlide"
+        [ngClass]="getCarouselClass(carouselSlide.id)">
+        <div class="lead text-center">
+          <h2>{{ carouselSlide.firstText }} custom content</h2>
+          <h3>{{ carouselSlide.firstText }} slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </div>
+    </slide>
+  </carousel>
+</section>
+
+<div class="container-fluid mb-5">
+  <!-- <div class="row" id="homeBlock">
     <carousel [isAnimated]="true" [interval]="3000" [noPause]="false" [showIndicators]="true">
       <slide *ngFor="let carouselSlide of carouselSlideData" class="d-block">
         <div class="d-flex align-items-center justify-content-center text-white carouselSlide"
@@ -30,5 +45,52 @@
         </div>
       </slide>
     </carousel>
+  </div> -->
+
+  <!-- <div class="row" id="welcomeBlock">
+    <div class="welcomeBlock">
+      <h2>Welcome to Tanvika</h2>
+      <p>
+        Whether you’re buying, selling or renting, we can help you move forward.
+      </p>
+    </div>
+  </div> -->
+
+
+  <div class="row servicesBlock" id="servicesBlock">
+    <h2 class="text-center">Services</h2>
+    <div class="cardList mt-4">
+      <div class="cardListItem" *ngFor="let service of serviceData">
+        <div class="card border-0 pt-2">
+          <div class="d-flex justify-content-center">
+            <img src="../assets/images/services/{{service.image}}" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ service.title }}</h5>
+            <p class="card-text my-4">{{ service.content }}</p>
+            <div class="d-block text-center">
+              <button class="btn btn-sm btn-primary rounded-pill px-3">Enquire now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row contactUs" id="contactUs">
+    <h2 class="text-center">Contact Us</h2>
+    <div class="cardList mt-4">
+      <div class="cardListItem" *ngFor="let contact of contactData">
+        <div class="card border-0 pt-2">
+          <div class="d-flex justify-content-center">
+            <img src="../assets/images/contactus/{{contact.image}}" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ contact.title }}</h5>
+            <p class="card-text my-4 text-secondary">{{ contact.content }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

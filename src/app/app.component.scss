@@ -17,6 +17,7 @@ nav {
 .navBarTransparent {
     background: #4a4f53ed;
     padding: 0.65rem;
+    position: fixed;
     // transition: width 2s, height 4s;
     transition: background-color 0.3s;
 }
@@ -45,4 +46,72 @@ nav {
 }
 .carouselSlide-3 {
     background-image: url(../assets/images/dashboard/carousel-4.jpg);
+}
+
+.welcomeBlock {
+    background: #e8206b;
+    color: white;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem;
+}
+
+.cardList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* Column Gap */
+.cardList > * {
+    box-sizing: border-box;
+}
+
+.cardList > *:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+/* Item sizing */
+.cardListItem {
+    flex: 0 1 calc(24%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // align-self: center;
+    &:hover {
+        box-shadow: 0 0 17px rgb(23 84 116 / 18%);
+    }
+}
+
+.servicesBlock {
+    padding: 3rem 0;
+    background: white;
+    color: black;
+    img {
+        width: 85% !important;
+        height: 35vmin;
+        width: fit-content;
+        border-radius: 1rem;
+    }
+    button {
+        background-color: #e26f00;
+        color: #fff;
+        border-color: #e26f00;
+        outline-color: transparent;
+    }
+    .card-text {
+        text-align: justify;
+        min-height: 14vmin;
+    }
+}
+
+.contactUs {
+    img {
+        width: 2rem;
+    }
+    .card-text {
+        text-align: center;
+        min-height: 6vmin;
+    }
 }
