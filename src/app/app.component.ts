@@ -72,10 +72,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   ]
 
   aboutUsData = [
-    { title: 'Buy Property', image: 'buyProperty.png', content: 'Invest in real estate today and reap the benefits tomorrow. We have huge connectivity to let you choose and buy from.' },
-    { title: 'Rent Property', image: 'rentProperty.png', content: 'Discover homes that fit into your price range. Tell us your budget and we will find the best homes for your choice.' },
-    { title: 'Resale Property', image: 'resaleProperty.png', content: 'Sell your existing property to make the most out of it. We will direct the right choice of customers to you.' },
-    { title: 'Registration and stamps', image: 'registrationAndStamps.png', content: 'Sell your existing property to make the most out of it. We will direct the right choice of customers to you.' }
+    { name: 'Mr. K. SRINIVAS REDDY', designation : 'Founder & Managing Director',image: 'buyProperty.png', about: 'He is the Managing Director of Shathabdhi Townships, Sri. K. Srinivasareddy is a successful real estate professional for more than a decade, his success has been due to his clear cut vision and long term planning is making the company Prosper the company year after year.' },
+    { name: 'K. LAXMI',designation : 'Director', image: 'rentProperty.png', about: 'She is one of the Directors of Shathabdhi Townships. Contributing her valuable suggestions and advice time and again to the Director, She has been an active board member diligently working towards the growth and progress of Shathabdhi Townships.' },
+    { name: 'K.VENUMADHAV REDDY',designation : 'Director', image: 'resaleProperty.png', about: 'The youngest and the most dynamic among the Directors, Venumadhav Reddy has been playing a vital role in the planning and execution of the ventures. Being a youngster, he has his own innovative approach towards the projects and all endeavors have been quite successful. Playing an important role in all the ventures of Shathabdhi Townships, He is the young promising face of Shathabdhi Townships.' },
+    { name: 'K. ARUNA DEVI',designation : 'Director', image: 'registrationAndStamps.png', about: 'Being one of the most important Directors of Shathabdhi Townships, She hasn’t been sparing no stone un-turned in making every project a successful venture. Thanks to her foresightedness, all her efforts to make ventures of Shathabdhi Townships a trust-worthy, reliable and investor-friendly have been yielding good results.' }
   ];
 
 }

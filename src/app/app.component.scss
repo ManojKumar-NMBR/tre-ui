@@ -121,20 +121,23 @@ nav {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-    }
-    /* Column Gap */
-    .aboutUsDiv > * {
-        box-sizing: border-box;
-    }
 
-    /* Item sizing */
-    .aboutImageItem {
-        flex-grow: 3;
-        img {
-            width: 25vmin;
+        .aboutImageItem {
+            flex: 2;
+            img {
+                width: 100%;
+            }
         }
-    }
-    .aboutDetailItem {
-        flex-grow: 9;
+        .aboutDetailItem {
+            flex: 10;
+            .nameDesignation {
+                .designation {
+                    font-size: large;
+                }
+            }
+            p {
+                text-align: justify;
+            }
+        }
     }
 }
