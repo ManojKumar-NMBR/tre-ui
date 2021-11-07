@@ -15,7 +15,7 @@ nav {
 }
 
 .navBarTransparent {
-    background: #4a4f53ed;
+    background: #071623f5;
     padding: 0.65rem;
     position: fixed;
     // transition: width 2s, height 4s;
@@ -113,5 +113,28 @@ nav {
     .card-text {
         text-align: center;
         min-height: 6vmin;
+    }
+}
+
+.aboutUsBlock {
+    .aboutUsList {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    /* Column Gap */
+    .aboutUsDiv > * {
+        box-sizing: border-box;
+    }
+
+    /* Item sizing */
+    .aboutImageItem {
+        flex-grow: 3;
+        img {
+            width: 25vmin;
+        }
+    }
+    .aboutDetailItem {
+        flex-grow: 9;
     }
 }
