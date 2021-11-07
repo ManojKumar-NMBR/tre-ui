@@ -80,14 +80,14 @@
   <div class="row contactUs" id="contactUs">
     <h2 class="text-center">Contact Us</h2>
     <div class="cardList mt-4">
-      <div class="cardListItem" *ngFor="let contact of contactData">
+      <div class="cardListItem" [ngClass]="{'border-end': !last}" *ngFor="let contact of contactData; let last = last">
         <div class="card border-0 pt-2">
           <div class="d-flex justify-content-center">
             <img src="../assets/images/contactus/{{contact.image}}" class="card-img-top" alt="...">
           </div>
           <div class="card-body">
             <h5 class="card-title text-center">{{ contact.title }}</h5>
-            <p class="card-text my-4 text-secondary">{{ contact.content }}</p>
+            <p class="card-text mt-4 mb-1 text-secondary">{{ contact.content }}</p>
           </div>
         </div>
       </div>
