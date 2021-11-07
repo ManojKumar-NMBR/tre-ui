@@ -31,7 +31,7 @@
   </carousel>
 </section>
 
-<div class="container-fluid mb-5">
+<div class="container-fluid">
   <!-- <div class="row" id="homeBlock">
     <carousel [isAnimated]="true" [interval]="3000" [noPause]="false" [showIndicators]="true">
       <slide *ngFor="let carouselSlide of carouselSlideData" class="d-block">
@@ -59,6 +59,7 @@
 
   <div class="row servicesBlock" id="servicesBlock">
     <h2 class="text-center">Services</h2>
+    <div class="headerUnderline mx-auto"></div>
     <div class="cardList mt-4">
       <div class="cardListItem" *ngFor="let service of serviceData">
         <div class="card border-0 pt-2">
@@ -77,8 +78,28 @@
     </div>
   </div>
 
-  <div class="row contactUs" id="contactUs">
+  <div class="aboutUsBlock pt-5" id="aboutUsBlock">
+    <h2 class="text-center">Who We Are!</h2>
+    <div class="headerUnderline mx-auto"></div>
+    <section class="mx-5">
+      <ng-container [ngTemplateOutlet]="aboutUsTempLeftToRight"
+        [ngTemplateOutletContext]="{aboutUsData : aboutUsData[0]}">
+      </ng-container>
+      <ng-container [ngTemplateOutlet]="aboutUsTempRightToLeft"
+        [ngTemplateOutletContext]="{aboutUsData : aboutUsData[1]}">
+      </ng-container>
+      <ng-container [ngTemplateOutlet]="aboutUsTempLeftToRight"
+        [ngTemplateOutletContext]="{aboutUsData : aboutUsData[2]}">
+      </ng-container>
+      <ng-container [ngTemplateOutlet]="aboutUsTempRightToLeft"
+        [ngTemplateOutletContext]="{aboutUsData : aboutUsData[3]}">
+      </ng-container>
+    </section>
+  </div>
+
+  <div class="row contactUs mb-5" id="contactUs">
     <h2 class="text-center">Contact Us</h2>
+    <div class="headerUnderline mx-auto"></div>
     <div class="cardList mt-4">
       <div class="cardListItem" [ngClass]="{'border-end': !last}" *ngFor="let contact of contactData; let last = last">
         <div class="card border-0 pt-2">
@@ -94,22 +115,10 @@
     </div>
   </div>
 
-  <div class="aboutUsBlock mt-5" id="aboutUsBlock">
-    <h2 class="text-center">Who We Are!</h2>
-    <section class="mx-5">
-      <ng-container [ngTemplateOutlet]="aboutUsTempLeftToRight"
-        [ngTemplateOutletContext]="{aboutUsData : aboutUsData[0]}">
-      </ng-container>
-      <ng-container [ngTemplateOutlet]="aboutUsTempRightToLeft"
-        [ngTemplateOutletContext]="{aboutUsData : aboutUsData[1]}">
-      </ng-container>
-      <ng-container [ngTemplateOutlet]="aboutUsTempLeftToRight"
-        [ngTemplateOutletContext]="{aboutUsData : aboutUsData[2]}">
-      </ng-container>
-      <ng-container [ngTemplateOutlet]="aboutUsTempRightToLeft"
-        [ngTemplateOutletContext]="{aboutUsData : aboutUsData[3]}">
-      </ng-container>
-    </section>
+
+
+  <div class="footerBlock py-2 bg-dark text-secondary" id="footerBlock">
+    <span class="d-block text-center">Copyright 2021 | All Rights Reserved by Tanvika Real Estate</span>
   </div>
 </div>
 
