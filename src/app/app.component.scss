@@ -129,13 +129,13 @@ nav {
         justify-content: space-around;
 
         .aboutImageItem {
-            flex: 2;
+            flex: 1;
             img {
                 width: 100%;
             }
         }
         .aboutDetailItem {
-            flex: 10;
+            flex: 11;
             .nameDesignation {
                 .designation {
                     font-size: large;
@@ -143,6 +143,37 @@ nav {
             }
             p {
                 text-align: justify;
+            }
+        }
+    }
+}
+
+.footerBlock {
+    .about {
+        p {
+            color: #e8dfdb;
+        }
+    }
+    .socialMedia {
+        li {
+            margin-right: 1rem;
+            &:hover {
+                transform: rotate(-360deg);
+                transition: transform 0.4s ease-in;
+            }
+            i {
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                font-size: 20px;
+                color: #b78c33;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                text-align: center;
+                &:hover {
+                    color: aliceblue;
+                    background: #b78c33;
+                    border-color: #b78c33;
+                }
             }
         }
     }
